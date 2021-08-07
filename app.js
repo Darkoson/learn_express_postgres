@@ -10,7 +10,7 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-    res.json(' our endpoints are free  ........... ');
+    res.json(`our endpoints are free and running on port: ${port}   ........... `);
 
 })
 
@@ -56,5 +56,5 @@ app.get('/students/:id' , async (req , res)=>{
 
 
 const port = process.env.port || 3001;
-app.listen(port, () => { console.log(` server started on port ${port} ...`); })
+app.listen(port, () => { console.log(`server started on port ${port} ...`); })
 
